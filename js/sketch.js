@@ -3,6 +3,7 @@ let brushSize = 10;
 let hue = 350;
 let tint = 255;
 let lum = 255;
+let graphics;
 
 function preload() {
     cursor = loadImage("../img/paintbrush.png");
@@ -10,12 +11,12 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    background(255);
+    graphics = createGraphics(windowWidth, windowHeight);
+    graphics.background(255);
     noStroke();
 }
 
 function draw() {
-    background(255);
     fill(hue, tint, lum);
     colorMode(HSB)
     stroke(hue, tint, lum);
@@ -25,8 +26,12 @@ function draw() {
     if (mouseIsPressed === true) {
         line(mouseX, mouseY, pmouseX, pmouseY);
     }
+    graphics.image(cursor, mouseX, mouseY, 30, 30)
 
-    image(cursor, mouseX, mouseY, 30, 30)
+
+
+    image(graphics, 0, 0);
+
 }
 
 function keyPressed() {
@@ -46,5 +51,4 @@ function keyPressed() {
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-    background(255);
 }
