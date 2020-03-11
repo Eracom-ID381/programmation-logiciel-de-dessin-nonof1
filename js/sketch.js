@@ -1,29 +1,31 @@
 let cursor;
 let graphics;
 let brushSize = 10;
-let hue = 0;
+let hue = 255;
 let tint = 255;
 let lum = 255;
 
-function setup() {
+function preload() {
     cursor = loadImage("../img/paintbrush.png");
+}
 
+function setup() {
     createCanvas(windowWidth, windowHeight);
     pixelDensity(1);
-    //    graphics = createGraphics(windowWidth, windowHeight);
-    //    graphics.background(255);
+    graphics = createGraphics(windowWidth, windowHeight);
+    graphics.background(255);
 }
 
 function draw() {
-    //background(255);
-    //image(graphics, 0, 0);
+    background(255);
+    image(graphics, 0, 0);
 
     if (mouseIsPressed) {
-        stroke(hue);
-        strokeWeight(brushSize);
-        line(mouseX, mouseY, pmouseX, pmouseY);
+        graphics.stroke(0);
+        graphics.strokeWeight(brushSize);
+        graphics.line(mouseX, mouseY, pmouseX, pmouseY);
     }
-    //image(cursor, mouseX, mouseY, 30, 30);
+    image(cursor, mouseX, mouseY, 35, 35);
 }
 
 function keyPressed() {
