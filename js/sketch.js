@@ -5,28 +5,25 @@ let hue = 0;
 let tint = 255;
 let lum = 255;
 
-function preload() {
-    cursor = loadImage("../img/paintbrush.png");
-}
-
 function setup() {
+    cursor = loadImage("../img/paintbrush.png");
+
     createCanvas(windowWidth, windowHeight);
     pixelDensity(1);
-    graphics = createGraphics(windowWidth, windowHeight);
-    graphics.background(255);
+    //    graphics = createGraphics(windowWidth, windowHeight);
+    //    graphics.background(255);
 }
 
 function draw() {
-    background(255);
-
-    image(graphics, 0, 0);
+    //background(255);
+    //image(graphics, 0, 0);
 
     if (mouseIsPressed) {
-        graphics.stroke(hue);
-        graphics.strokeWeight(brushSize);
-        graphics.line(mouseX, mouseY, pmouseX, pmouseY);
+        stroke(hue);
+        strokeWeight(brushSize);
+        line(mouseX, mouseY, pmouseX, pmouseY);
     }
-    image(cursor, mouseX, mouseY, 30, 30);
+    //image(cursor, mouseX, mouseY, 30, 30);
 }
 
 function keyPressed() {
