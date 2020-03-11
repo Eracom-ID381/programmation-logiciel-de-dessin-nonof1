@@ -44,10 +44,10 @@ function draw() {
     text("Diminuer taille du pinceau", 45, 90);
 
     image(leftArrow, 10, 130, 30, 30);
-    text("Aller vers le bleu", 45, 155);
+    text("Aller vers le magenta", 45, 155);
 
     image(rightArrow, 10, 190, 30, 30);
-    text("Aller vers le magenta", 45, 215);
+    text("Aller vers le bleu", 45, 215);
 
     fill(hue, sat, lum);
     strokeWeight(0);
