@@ -4,6 +4,7 @@ let brushSize = 10;
 let hue = 2;
 let tint = 255;
 let lum = 255;
+let graphics;
 
 function preload() {
   cursor = loadImage("../img/paintbrush.png");
