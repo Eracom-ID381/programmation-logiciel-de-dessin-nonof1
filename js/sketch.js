@@ -36,6 +36,7 @@ function draw() {
     image(cursor, mouseX, mouseY, 35, 35);
 
     textSize(20);
+    strokeWeight(0);
     fill(0);
     image(upArrow, 10, 10, 30, 30);
     text("Augmenter taille du pinceau", 45, 35);
@@ -52,6 +53,10 @@ function draw() {
     fill(hue, sat, lum);
     strokeWeight(0);
     rect(0, 250, 300, 40);
+
+    strokeWeight(2);
+    stroke(0);
+    line(300, 0, 300, windowHeight);
 }
 
 function keyPressed() {
