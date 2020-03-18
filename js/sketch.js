@@ -49,24 +49,38 @@ function keyPressed() {
     }
     if (key === '1') {
         hue = 01;
+        sat = 255;
+        lum = 255;
     }
     if (key === '2') {
         hue = 20;
+        sat = 255;
+        lum = 255;
     }
     if (key === '3') {
         hue = 35;
+        sat = 255;
+        lum = 255;
     }
     if (key === '4') {
         hue = 60;
+        sat = 255;
+        lum = 255;
     }
     if (key === '5') {
         hue = 130;
+        sat = 255;
+        lum = 255;
     }
     if (key === '6') {
         hue = 160;
+        sat = 255;
+        lum = 255;
     }
     if (key === '7') {
         hue = 190;
+        sat = 255;
+        lum = 255;
     }
     if (key === '8') {
         hue = 0;
@@ -91,17 +105,88 @@ function drawSidebar() {
     image(downArrow, 10, 70, 30, 30);
     text("Diminuer taille du pinceau", 45, 90);
 
-    image(leftArrow, 10, 130, 30, 30);
-    text("Aller vers le magenta", 45, 155);
-
-    image(rightArrow, 10, 190, 30, 30);
-    text("Aller vers le bleu", 45, 215);
-
     fill(hue, sat, lum);
     strokeWeight(0);
-    rect(0, 250, 300, 40);
+    rect(0, 120, 300, 40);
 
     strokeWeight(2);
     stroke(0);
     line(300, 0, 300, windowHeight);
+
+    drawColorpalette();
+}
+
+function drawColorpalette() {
+
+    //Rouge
+    strokeWeight(2);
+    fill(0, 255, 255);
+    rect(40, 190, 35, 35);
+    strokeWeight(0);
+    fill(0);
+    text("1", 53, 214);
+
+    //Orange
+    strokeWeight(2);
+    fill(20, 255, 255);
+    rect(110, 190, 35, 35);
+    strokeWeight(0);
+    fill(0);
+    text("2", 122, 214);
+
+    //Jaune
+    strokeWeight(2);
+    fill(35, 255, 255);
+    rect(40, 250, 35, 35);
+    strokeWeight(0);
+    fill(0);
+    text("3", 53, 274);
+
+    //Vert
+    strokeWeight(2);
+    fill(60, 255, 255);
+    rect(110, 250, 35, 35);
+    strokeWeight(0);
+    fill(0);
+    text("4", 122, 274);
+
+    //Bleu clair
+    strokeWeight(2);
+    fill(130, 255, 255);
+    rect(40, 310, 35, 35);
+    strokeWeight(0);
+    fill(0);
+    text("5", 52, 333);
+
+    //Bleu foncé
+    strokeWeight(2);
+    fill(160, 255, 255);
+    rect(110, 310, 35, 35);
+    strokeWeight(0);
+    fill(0);
+    text("6", 122, 333);
+
+    //Violet
+    strokeWeight(2);
+    fill(190, 255, 255);
+    rect(40, 370, 35, 35);
+    strokeWeight(0);
+    fill(0);
+    text("7", 52, 394);
+
+    //Noir
+    strokeWeight(2);
+    fill(0);
+    rect(40, 470, 35, 35);
+    strokeWeight(0);
+    fill(255);
+    text("8", 52, 494);
+
+    //Blanc
+    strokeWeight(2);
+    fill(255);
+    rect(110, 470, 35, 35);
+    strokeWeight(0);
+    fill(0);
+    text("9", 122, 494);
 }
