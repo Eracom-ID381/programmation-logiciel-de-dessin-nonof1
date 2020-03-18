@@ -47,11 +47,31 @@ function keyPressed() {
     if (keyCode === UP_ARROW) {
         brushSize = brushSize + 5;
     }
-    if (keyCode === RIGHT_ARROW) {
-        hue = hue - 10;
+    if (key === '1') {
+        hue = 01;
     }
-    if (keyCode === LEFT_ARROW) {
-        hue = hue + 10;
+    if (key === '2') {
+        hue = 20;
+    }
+    if (key === '3') {
+        hue = 35;
+    }
+    if (key === '4') {
+        hue = 60;
+    }
+    if (key === '5') {
+        hue = 130;
+    }
+    if (key === '6') {
+        hue = 160;
+    }
+    if (key === '7') {
+        hue = 190;
+    }
+    if (key === '8') {
+        hue = 0;
+        sat = 0;
+        lum = 0;
     }
 
 }
