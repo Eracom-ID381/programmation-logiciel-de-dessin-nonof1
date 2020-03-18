@@ -36,6 +36,7 @@ function draw() {
         graphics.strokeWeight(brushSize);
         graphics.line(mouseX, mouseY, pmouseX, pmouseY);
     }
+
     image(cursor, mouseX, mouseY, 35, 35);
     drawSidebar();
 }
@@ -87,6 +88,14 @@ function keyPressed() {
         sat = 0;
         lum = 0;
     }
+    if (key === '9') {
+        hue = 0;
+        sat = 0;
+        lum = 255;
+        cursor = loadImage("../img/eraser.png");
+    } else {
+        cursor = loadImage("../img/paintbrush.png");
+    }
 
 }
 
@@ -106,7 +115,7 @@ function drawSidebar() {
     text("Diminuer taille du pinceau", 45, 90);
 
     fill(hue, sat, lum);
-    strokeWeight(0);
+    strokeWeight(2);
     rect(0, 120, 300, 40);
 
     strokeWeight(2);
