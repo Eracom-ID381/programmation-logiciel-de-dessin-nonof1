@@ -5,8 +5,8 @@ let rightArrow;
 let leftArrow;
 let graphics;
 let brushSize = 10;
-let hue = 255;
-let sat = 0;
+let hue = 0;
+let sat = 255;
 let lum = 255;
 
 function preload() {
@@ -22,6 +22,9 @@ function setup() {
     pixelDensity(1);
     graphics = createGraphics(windowWidth, windowHeight);
     graphics.background(255);
+
+    colorMode(HSB, 255);
+    graphics.colorMode(HSB, 255);
 }
 
 function draw() {
@@ -34,7 +37,31 @@ function draw() {
         graphics.line(mouseX, mouseY, pmouseX, pmouseY);
     }
     image(cursor, mouseX, mouseY, 35, 35);
+    drawSidebar();
+}
 
+function keyPressed() {
+    if (keyCode === DOWN_ARROW) {
+        brushSize = brushSize - 5;
+    }
+    if (keyCode === UP_ARROW) {
+        brushSize = brushSize + 5;
+    }
+    if (keyCode === RIGHT_ARROW) {
+        hue = hue - 10;
+    }
+    if (keyCode === LEFT_ARROW) {
+        hue = hue + 10;
+    }
+
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    background(255);
+}
+
+function drawSidebar() {
     textSize(20);
     strokeWeight(0);
     fill(0);
@@ -57,24 +84,4 @@ function draw() {
     strokeWeight(2);
     stroke(0);
     line(300, 0, 300, windowHeight);
-}
-
-function keyPressed() {
-    if (keyCode === DOWN_ARROW) {
-        brushSize = brushSize - 5;
-    }
-    if (keyCode === UP_ARROW) {
-        brushSize = brushSize + 5;
-    }
-    if (keyCode === RIGHT_ARROW) {
-        hue = hue - 10;
-    }
-    if (keyCode === LEFT_ARROW) {
-        hue = hue + 10;
-    }
-}
-
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-    background(255);
 }
