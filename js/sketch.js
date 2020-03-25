@@ -202,10 +202,12 @@ function drawColorpalette() {
     //try
     palette = createButton("Couleur");
     palette.mousePressed(couleur);
-    button.position(100, 100);
-    button.size(90, 50);
+    palette.position(100, 100);
+    palette.size(90, 50);
 }
 
 function couleur() {
-    graphics.stroke('blue');
+    hue = 0;
+    sat = 0;
+    lum = 0;
 }
