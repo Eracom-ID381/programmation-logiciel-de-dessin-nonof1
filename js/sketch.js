@@ -91,7 +91,7 @@ function drawColorpalette() {
     //Black
     palette = createButton("Noir");
     palette.mousePressed(noir);
-    palette.style("background-color", "black");
+    palette.style("background-color", "#000000");
     palette.position(40, 300);
     palette.size(40, 40);
 
@@ -104,7 +104,7 @@ function drawColorpalette() {
     //red
     red = createButton("");
     red.mousePressed(rouge);
-    red.style("background-color", "red");
+    red.style("background-color", "#ff0000");
     red.position(40, 180);
     red.size(40, 40);
 
