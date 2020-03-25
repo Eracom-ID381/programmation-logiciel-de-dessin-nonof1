@@ -51,6 +51,15 @@ function draw() {
     drawSidebar();
 }
 
+function keyPressed() {
+    if (keyCode === DOWN_ARROW) {
+        brushSize = brushSize - 5;
+    }
+    if (keyCode === UP_ARROW) {
+        brushSize = brushSize + 5;
+    }
+}
+
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
     background(255);
@@ -188,6 +197,7 @@ function bleu02() {
     hue = 160;
     sat = 255;
     lum = 255;
+    cursor = loadImage("../img/paintbrush.png");
 }
 
 function violett() {
