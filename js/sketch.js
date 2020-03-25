@@ -26,6 +26,7 @@ function setup() {
 
     colorMode(HSB, 255);
     graphics.colorMode(HSB, 255);
+
 }
 
 function draw() {
@@ -34,7 +35,7 @@ function draw() {
 
     if (mouseIsPressed) {
         graphics.stroke(hue, sat, lum);
-        graphics.strokeWeight(brushSize);
+        graphics.strokeWeight(constrain(brushSize, 5, 10));
         graphics.line(mouseX, mouseY, pmouseX, pmouseY);
     }
 
