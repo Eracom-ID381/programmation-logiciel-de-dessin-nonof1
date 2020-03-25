@@ -19,11 +19,11 @@ let bleuFonce;
 let violet;
 
 function preload() {
-    cursor = loadImage("js/img/paintbrush.png");
-    upArrow = loadImage("js/img/up.png");
-    downArrow = loadImage("js/img/down.png");
-    leftArrow = loadImage("js/img/left.png");
-    rightArrow = loadImage("js/img/right.png");
+    cursor = loadImage("../img/paintbrush.png");
+    upArrow = loadImage("../img/up.png");
+    downArrow = loadImage("../img/down.png");
+    leftArrow = loadImage("../img/left.png");
+    rightArrow = loadImage("../img/right.png");
 }
 
 function setup() {
@@ -35,6 +35,58 @@ function setup() {
     colorMode(HSB, 255);
     graphics.colorMode(HSB, 255);
 
+    //Black
+    palette = createButton("Noir");
+    palette.style("background-color", "#000000");
+    palette.position(40, 300);
+    palette.size(40, 40);
+
+    //white
+    white = createButton("");
+    white.position(90, 300);
+    white.size(40, 40);
+
+    //red
+    red = createButton("");
+    red.style("background-color", "#ff0000");
+    red.position(40, 180);
+    red.size(40, 40);
+
+    //orange
+    orange = createButton("");
+    orange.style("background-color", "#ff6600");
+    orange.position(90, 180);
+    orange.size(40, 40);
+
+    //yellow
+    yellow = createButton("");
+    yellow.style("background-color", "#ffcc00");
+    yellow.position(140, 180);
+    yellow.size(40, 40);
+
+    //green
+    green = createButton("");
+    green.style("background-color", "#00ff00");
+    green.position(40, 230);
+    green.size(40, 40);
+
+    //light blue
+    bleuClair = createButton("");
+    bleuClair.style("background-color", "#00ffff");
+    bleuClair.position(90, 230);
+    bleuClair.size(40, 40);
+
+    //dark blue
+    bleuFonce = createButton("");
+    bleuFonce.style("background-color", "#0000ff");
+    bleuFonce.position(90, 230);
+    bleuFonce.size(40, 40);
+
+    //purple
+    violet = createButton("");
+    violet.style("background-color", "#6600ff");
+    violet.position(140, 230);
+    violet.size(40, 40);
 }
 
 function draw() {
@@ -89,66 +141,31 @@ function drawSidebar() {
 function drawColorpalette() {
 
     //Black
-    palette = createButton("Noir");
     palette.mousePressed(noir);
-    palette.style("background-color", "#000000");
-    palette.position(40, 300);
-    palette.size(40, 40);
 
     //white
-    white = createButton("");
     white.mousePressed(blanc);
-    white.position(90, 300);
-    white.size(40, 40);
 
     //red
-    red = createButton("");
     red.mousePressed(rouge);
-    red.style("background-color", "#ff0000");
-    red.position(40, 180);
-    red.size(40, 40);
 
     //orange
-    orange = createButton("");
     orange.mousePressed(orang);
-    orange.style("background-color", "#ff6600");
-    orange.position(90, 180);
-    orange.size(40, 40);
 
     //yellow
-    yellow = createButton("");
     yellow.mousePressed(jaune);
-    yellow.style("background-color", "#ffcc00");
-    yellow.position(140, 180);
-    yellow.size(40, 40);
 
     //green
-    green = createButton("");
     green.mousePressed(vert);
-    green.style("background-color", "#00ff00");
-    green.position(40, 230);
-    green.size(40, 40);
 
     //light blue
-    bleuClair = createButton("");
     bleuClair.mousePressed(bleu01);
-    bleuClair.style("background-color", "#00ffff");
-    bleuClair.position(90, 230);
-    bleuClair.size(40, 40);
 
     //dark blue
-    bleuFonce = createButton("");
     bleuFonce.mousePressed(bleu02);
-    bleuFonce.style("background-color", "#0000ff");
-    bleuFonce.position(90, 230);
-    bleuFonce.size(40, 40);
 
     //purple
-    violet = createButton("");
     violet.mousePressed(violett);
-    violet.style("background-color", "#6600ff");
-    violet.position(140, 230);
-    violet.size(40, 40);
 }
 
 function noir() {
