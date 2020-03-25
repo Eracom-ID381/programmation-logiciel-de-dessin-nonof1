@@ -200,7 +200,6 @@ function drawColorpalette() {
     text("9", 122, 494);
 
     //try
-
     palette = createButton("Couleur");
     palette.mousePressed(couleur);
     button.position(100, 100);
@@ -208,5 +207,5 @@ function drawColorpalette() {
 }
 
 function couleur() {
-    stroke('blue');
+    graphics.stroke('blue');
 }
