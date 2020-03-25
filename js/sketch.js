@@ -8,6 +8,7 @@ let brushSize = 10;
 let hue = 0;
 let sat = 255;
 let lum = 255;
+let palette;
 
 function preload() {
     cursor = loadImage("../img/paintbrush.png");
@@ -96,7 +97,6 @@ function keyPressed() {
     } else {
         cursor = loadImage("../img/paintbrush.png");
     }
-
 }
 
 function windowResized() {
@@ -198,4 +198,15 @@ function drawColorpalette() {
     strokeWeight(0);
     fill(0);
     text("9", 122, 494);
+
+    //try
+
+    palette = createButton("Couleur");
+    palette.mousePressed(couleur);
+    button.position(100, 100);
+    button.size(90, 50);
+}
+
+function couleur() {
+    stroke('blue');
 }
