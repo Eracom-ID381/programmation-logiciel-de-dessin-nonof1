@@ -9,6 +9,8 @@ let hue = 0;
 let sat = 255;
 let lum = 255;
 let palette;
+let white;
+let red;
 
 function preload() {
     cursor = loadImage("../img/paintbrush.png");
@@ -184,31 +186,36 @@ function drawColorpalette() {
     fill(0);
     text("7", 52, 394);
 
-    //Noir
-    strokeWeight(2);
-    fill(0);
-    rect(40, 470, 35, 35);
-    strokeWeight(0);
-    fill(255);
-    text("8", 52, 494);
+    //Black
+    palette = createButton("Noir");
+    palette.mousePressed(noir);
+    palette.style("background-color", "black");
+    palette.position(40, 465);
+    palette.size(40, 40);
 
-    //Blanc
-    strokeWeight(2);
-    fill(255);
-    rect(110, 470, 35, 35);
-    strokeWeight(0);
-    fill(0);
-    text("9", 122, 494);
+    //white
+    white = createButton("");
+    white.mousePressed(blanc);
+    white.position(90, 465);
+    white.size(40, 40);
 
-    //try
-    palette = createButton("Couleur");
-    palette.mousePressed(couleur);
-    palette.position(100, 100);
-    palette.size(90, 50);
+    //red
+    red = createButton("");
+    red.mousePressed(red);
+    red.style("background-color", "red");
+    red.position(40, 180);
+    red.size(40, 40);
 }
 
-function couleur() {
+function noir() {
     hue = 0;
     sat = 0;
     lum = 0;
+}
+
+function blanc() {
+    hue = 0;
+    sat = 0;
+    lum = 255;
+    cursor = loadImage("../img/eraser.png");
 }
