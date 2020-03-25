@@ -19,11 +19,11 @@ let bleuFonce;
 let violet;
 
 function preload() {
-    cursor = loadImage("../img/paintbrush.png");
-    upArrow = loadImage("../img/up.png");
-    downArrow = loadImage("../img/down.png");
-    leftArrow = loadImage("../img/left.png");
-    rightArrow = loadImage("../img/right.png");
+    cursor = loadImage("js/img/paintbrush.png");
+    upArrow = loadImage("js/img/up.png");
+    downArrow = loadImage("js/img/down.png");
+    leftArrow = loadImage("js/img/left.png");
+    rightArrow = loadImage("js/img/right.png");
 }
 
 function setup() {
