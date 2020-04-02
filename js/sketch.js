@@ -19,16 +19,19 @@ let bleuFonce;
 let violet;
 
 function preload() {
-    cursor = loadImage("./img/paintbrush.png");
+    paintbrush = loadImage("./img/paintbrush.png");
     upArrow = loadImage("./img/up.png");
     downArrow = loadImage("./img/down.png");
     leftArrow = loadImage("./img/left.png");
     rightArrow = loadImage("./img/right.png");
+    eraser = loadImage("../img/eraser.png");
 }
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
     pixelDensity(1);
+
+    cursor = paintbrush;
     graphics = createGraphics(windowWidth, windowHeight);
     graphics.background(255);
 
@@ -172,61 +175,61 @@ function noir() {
     hue = 0;
     sat = 0;
     lum = 0;
-    cursor = loadImage("../img/paintbrush.png");
+    cursor = paintbrush;
 }
 
 function rouge() {
     hue = 01;
     sat = 255;
     lum = 255;
-    cursor = loadImage("../img/paintbrush.png");
+    cursor = paintbrush;
 }
 
 function orang() {
     hue = 20;
     sat = 255;
     lum = 255;
-    cursor = loadImage("../img/paintbrush.png");
+    cursor = paintbrush;
 }
 
 function jaune() {
     hue = 35;
     sat = 255;
     lum = 255;
-    cursor = loadImage("../img/paintbrush.png");
+    cursor = paintbrush;
 }
 
 function vert() {
     hue = 60;
     sat = 255;
     lum = 255;
-    cursor = loadImage("../img/paintbrush.png");
+    cursor = paintbrush;
 }
 
 function bleu01() {
     hue = 130;
     sat = 255;
     lum = 255;
-    cursor = loadImage("../img/paintbrush.png");
+    cursor = paintbrush;
 }
 
 function bleu02() {
     hue = 160;
     sat = 255;
     lum = 255;
-    cursor = loadImage("../img/paintbrush.png");
+    cursor = paintbrush;
 }
 
 function violett() {
     hue = 190;
     sat = 255;
     lum = 255;
-    cursor = loadImage("../img/paintbrush.png");
+    cursor = paintbrush;
 }
 
 function blanc() {
     hue = 0;
     sat = 0;
     lum = 255;
-    cursor = loadImage("../img/eraser.png");
+    cursor = eraser;
 }
